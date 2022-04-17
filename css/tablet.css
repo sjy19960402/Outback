@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+/* 최소 768이상 ~ 최대 1024px */
+@media screen and (min-width:768px) and (max-width:1024px) {
+
+    /* 상단헤더서식 : 1025px -> 100% */
+    .header_inner{width: 100%; height: 120px;}
+    .header_inner > h1{transform: translateX(60px);}
+    .gnb > ul{width: 100%;}
+
+    .total_btn{
+        position: absolute;
+        right: 20px; bottom: 0px;
+        z-index: 1001;
+        display: inline;
+    }
+    .total_btn > i.fas{
+        color: #fff;
+        padding-left: 30px;
+        font-size: 1.75rem; /* 1rem = 16px */
+        transform: translateY(-20px);
+    }
+    /* 토글버튼 클릭시 gnb내비게이션 등장 */
+    #toggle:checked + header > .gnb{height: 260px;}
+    
+    /* 내비게이션 서식 */
+    .gnb{top: 70px;}
+    .gnb > ul{transform: translateX(-30px);}
+    .gnb > ul > li:last-child{margin-right: 50px;}
+    .gnb > ul > li{margin: 0px 0.5%;}
+    .gnb > ul > li > a{font-size: 0.8rem;}
+    .sub{padding-top: 25px;}
+    .lnb{right: 10%;}
+
+    /* 해상도가 낮은 tablet 화면에서 수정사항 */
+    @media screen and (min-width:768px) and (max-width:829px) {
+        .gnb > ul > li{margin: 0px 0.1%;}
+        .sub > li > a{font-size: 0.7rem;}
+    }
+
+/* 메인콘텐츠 서식 */
+.slide{width: 100%;}
+.cont{
+    width: 100%;
+    display: grid;
+    box-sizing: border-box;
+    grid-column-gap: 1%;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+    "team t_info"
+    "m_01 m_02"
+    "m_03 m_04"
+    "boo boo"
+    "benefit benefit";
+}
+.cont > h2{display: none;}
+/* 메인 : 아웃백 팀 */
+.team a{display: block;}
+.team iframe{width:440px; transform: translateX(40px);}
+.team_info{
+    grid-area: t_info;
+    transform: translateX(-30px);
+}
+.team_info p:nth-child(2){font-size: 1.75rem;}
+.team_info span{width: 180px; left: 140px;}
+/* 메인 : 메뉴리스트 */
+.m_01, .m_02, .m_03, .m_04{width:384px; height: 440px; margin: 0px auto;}
+.m_01 img, .m_02 img, .m_03 img, .m_04 img{width: 100%;}
+.m_01, .m_03{transform: translateX(30px);}
+.m_02, .m_04{transform: translateX(-60px);}
+.m_01 p, .m_02 p, .m_03 p, .m_04 p{font-size: 3rem;}
+
+ /* 해상도가 낮은 tablet 화면에서 수정사항_2 */
+ @media screen and (min-width:768px) and (max-width:949px) {
+    .m_01, .m_03{transform: translateX(-10px);}
+    .m_01 img, .m_02 img, .m_03 img, .m_04 img{width: 96%;}
+    .team iframe{transform: translateX(10px);}
+    .boomerang{left:-5%;}
+}
+@media screen and (min-width:768px) and (max-width:859px) {
+    .boomerang{left:-10%;}
+    .boo_text{left: 300px;}
+}
+/* 메인 : 부메랑 */
+.boomerang{width: 768px;}
+.boo_text{margin-top: 30px; transform: translateX(-2%);}
+.b_title{transform: translateX(-15%);}
+.boo_text > ol > li >p:nth-child(2){font-size: 1rem;}
+.boo_text > ol > li >p:last-child{display: none;}
+.boo_text > ol > li{width: 200px;}
+.b_02{transform: translate(-400px,90px);}
+.boo_text > ol > li:nth-child(5){padding-left: 10px; box-sizing: border-box;}
+.boo_text > ol > li:last-child{padding-left: 10px;}
+
+/* 메인 : 베네핏 */
+.benefit{
+  width: 768px;
+  margin: 0px auto;
+  padding-left: 8%;
+}
+.benefit img{width: 100%;}
+
+/* 푸터 : sns */
+.sns > ul{padding-top: 40px;}
+.sns > ul > li{width: 28px;}
+.sns > ul > li img{width: 100%;}
+/* 푸터 : 브랜드 */
+.brand_btn > ul > li{width: 100px;}
+.brand_btn > ul > li img{width: 100%;}
+
+.f_qna p span{color: #fff;}
+
+}
